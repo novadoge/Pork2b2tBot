@@ -78,7 +78,8 @@ public class ListenerRegistry {
     public static void handlePacket(Session session, MinecraftPacket pck) {
         IPacketListener listener = listeners.get(pck.getClass());
         if (listener == null) {
-            System.out.println("[WARN] Unable to find listener for " + pck.getClass().getCanonicalName());
+            //System.out.println("[WARN] Unable to find listener for " + pck.getClass().getCanonicalName());
+        		//stfu i dont need this
         } else {
             listener.handlePacket(session, pck);
         }
